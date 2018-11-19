@@ -1,0 +1,6 @@
+hw2-1 : db.movieDetails.find({year: 2013, rated: "PG-13", "awards.wins": 0}).pretty()
+hw2-2 : db.movieDetails.find({}, {title: 1, _id: 0}).pretty()
+hw2-3 : db.movieDetails.find({"countries.1": "Sweden"}).count()
+hw2-4 : db.movieDetails.find({genres: ["Comedy", "Crime"]}).count()
+hw2-5 : db.movieDetails.find({$and: [{genres: "Comedy"}, {genres: "Crime"}]}).count()
+hw2-6 : $set
